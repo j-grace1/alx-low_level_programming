@@ -13,21 +13,21 @@ int main(void)
 	{
 		for (a = '0'; a <= '9'; a++)
 		{
-            for (b = '0'; b <= '9'; b++)
-		    {
-                if (num < a && a < b)
-			    {
-				    putchar(num);
-				    putchar(a);
-                    putchar(b);
+			for (b = '0'; b <= '9'; b++)
+			{
+				if (num < a && a < b)
+				{
+					putchar(num);
+					putchar(a);
+					putchar(b);
 
-				    if (num != '8' || (num == '8' && a != '9'))
-				    {
-					    putchar(',');
-					    putchar(' ');
-				    }
-			    }
-            }
+					if (num != '7')
+					{
+						putchar(',');
+						putchar(' ');
+					}
+				}
+			}
 		}
 	}
 
