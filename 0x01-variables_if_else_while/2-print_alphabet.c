@@ -4,7 +4,6 @@
  * main - Prints the alphabet in lowercase
  *
  * Return: Always successful
- * 
  */
 
 int main(void)
