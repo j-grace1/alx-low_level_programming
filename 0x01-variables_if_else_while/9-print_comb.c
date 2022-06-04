@@ -10,17 +10,17 @@ int main(void)
 {
 	int num;
 
-	for (c = '0'; c <= '9'; c++)
+	for (num = '0'; num <= '9'; num++)
 	{
-		putchar(c);
+		putchar(num);
 
-		if (c != '9')
+		if (num != '9')
 		{
 			putchar(',');
 			putchar(' ');
 		}
 	}
-    
+
 	putchar('\n');
 
 	return (0);
