@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * main - Prints whether a number is positive, zero or negative
+ * main - Prints whether a number is greater than 5, less than 6 and not 0 or equals to 0
  *
  * Return: Always successfull
  */
@@ -15,17 +15,17 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	digit = n % 10;
 
-	if (n > 0)
+	if (n > 5)
 	{
-		printf("%d is positive\n", digit);
+		printf("Last digit of %d is %d and is greater than 5\n", n, digit);
 	}
-	else if (n == 0)
+	else if (n < 6 && n != 0)
 	{
-		printf("%d is zero\n", digit);
+		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, digit);
 	}
-	else
+	else(n == 0)
 	{
-		printf("%d is negative\n", digit);
+		printf("Last digit of %d is %d and is 0\n", n, digit);
 	}
 
 	return (0);
