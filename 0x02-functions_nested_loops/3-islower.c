@@ -3,7 +3,7 @@
 /**
  * _islower - prints 1 if c is lowercase else 0
  * @c: is the input into the function
- * 
+ *
  * Return: returns 0
  *
  */
