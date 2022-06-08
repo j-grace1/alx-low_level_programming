@@ -2,21 +2,17 @@
 
 /**
  * _islower - prints 1 if c is lowercase else 0
- *
+ * @c: is the input into the function
+ * 
  * Return: returns 0
  *
  */
 int _islower(int c)
 {
-    
-int i = 'a';
+	if (c >= 97 && c <= 122)
+	{
+		return (1);
+	}
 
-    while (i <= 'z')
-    {
-        if (i == c)
-        {
-            return(0);
-        }
-    }
-return(0); 
+	return (0);
 }
