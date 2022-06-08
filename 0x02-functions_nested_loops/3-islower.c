@@ -9,16 +9,19 @@
 int _islower(int c)
 {
     
-char i;
-    for (i = 0; i < 26; i++)
+int i = 'a';
+
+    while (i <= 'z')
     {
         if (i == c)
         {
             _putchar('1');
+            continue;
         }
         else
         {
             _putchar('0');
+            break;
         }
     }
 return(0); 
