@@ -15,13 +15,7 @@ int i = 'a';
     {
         if (i == c)
         {
-            _putchar('1');
-            continue;
-        }
-        else
-        {
-            _putchar('0');
-            break;
+            return(0);
         }
     }
 return(0); 
