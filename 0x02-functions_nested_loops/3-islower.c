@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * print_alphabet - alphabet in lowercase 10 times
+ * _islower - prints 1 if c is lowercase else 0
  *
  * Return: returns 0
  *
  */
-void print_alphabet(void)
+int _islower(int c)
 {
