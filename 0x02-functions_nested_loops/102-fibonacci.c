@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 /**
-  * main - Prints the first 50 fibonacci numbers
+  * main - Prints the first 98 fibonacci numbers
   *
   * Return: Nothing
   */
-unsigned long long int main(void)
+int main()
 {
 	int i = 0;
 	long j = 1, k = 2;
