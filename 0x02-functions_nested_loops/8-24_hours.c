@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
-  * jack_bauer - Prints every minute of the day 
+  * jack_bauer - Prints every minute of the day
   *
-  * Return: .........
+  * Return: ...
   */
 void jack_bauer(void)
 {
@@ -15,7 +15,7 @@ void jack_bauer(void)
 		{
 			if ((y <= 1 && y <= 9) || (i <= 2 && x <= 3))
 			{
-				for (y = 0; y <= 5; y++)
+				for (y = 0; y <= 3; y++)
 				{
 					for (z = 0; z <= 9; z++)
 					{
