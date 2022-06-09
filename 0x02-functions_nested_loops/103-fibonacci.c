@@ -11,7 +11,7 @@ int main(void)
 	int a = 0;
 	long b = 1, c = 2, sum = c;
 
-	while (k + b < 4000000)
+	while (c + b < 4000000)
 	{
 		c += b;
 
