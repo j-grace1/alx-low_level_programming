@@ -2,7 +2,7 @@
 
 /**
   * _abs - compustes the absolute value of a funtion
-  * @n: The number that is to be checked
+  * @h: The number that is to be checked
   *
   * Return: 1 for positive, -1 for negative else 0
   */
