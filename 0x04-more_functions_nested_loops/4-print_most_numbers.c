@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-  * print_most_numbers - Prints most numbers 
+  * print_most_numbers - Prints most numbers
   *
   * Return: The most munbers from 0 to 9
   */
