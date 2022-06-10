@@ -2,7 +2,6 @@
 
 /**
   * print_most_numbers - Prints most numbers 
-  *Description: excludes 2 and 4
   *
   * Return: The most munbers from 0 to 9
   */
