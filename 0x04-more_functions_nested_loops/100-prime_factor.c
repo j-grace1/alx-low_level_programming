@@ -12,7 +12,7 @@ int main(void)
 	long num = 612852475143;
 	double sqr_t = sqrt(num);
 
-	for (x = 1; x <= sqr_t; x++)
+	for (i = 1; i <= sqr_t; i++)
 	{
 		if (num % i == 0)
 		{
