@@ -1,18 +1,20 @@
 #include "main.h"
 
 /**
- * _puts -  prints a string 
- * followed by a new line
+ * _puts - prints sting in specila way
  * @str: string input
  * Return: string
  */
 void puts2(char *str)
 {
-	int a;
+	int i = 0;
 
-	for (a = 0; str[a] != '\0'; a++)
+	for (; str[i] != '\0'; i++)
 	{
-		_putchar(str[a]);
-        _putchar('\n');
+		if ((i % 2) == 0)
+			_putchar(str[i]);
+		else
+			continue;
 	}
+	_putchar('\n');
 }
