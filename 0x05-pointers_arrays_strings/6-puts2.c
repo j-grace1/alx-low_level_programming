@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _puts - prints sting in specila way
+ * puts2 - prints sting in specila way
  * @str: string input
  * Return: string
  */
