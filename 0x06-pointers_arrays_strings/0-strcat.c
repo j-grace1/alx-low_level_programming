@@ -4,7 +4,8 @@
 /**
  * char *_strcat - contcatinates strings pointed
  * by inputs
- *
+ * @dest: receipient of additional sting
+ * @src: string to be added
  * Return: Always 0.
  */
 char *_strcat(char *dest, char *src)
