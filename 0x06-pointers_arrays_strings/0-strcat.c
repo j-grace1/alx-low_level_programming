@@ -6,7 +6,7 @@
  *
  * Return: Always 0.
  */
-char main(char *dest, char *src)
+char *_strcat(char *dest, char *src)
 {
     dest = "good";
     src = "foot";
@@ -22,6 +22,8 @@ char main(char *dest, char *src)
                 dest[len + j] = src[j];
             }
             break;
+            *ptr = dest;
         }
     }
+    return(ptr)
 }
