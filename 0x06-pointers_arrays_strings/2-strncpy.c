@@ -7,19 +7,15 @@
  * @n: n
  * Return: Always 0 (Success)
  */
-char *_strncat(char *dest, char *src, int n)
+char *_strncpy(char *dest, char *src, int n)
 {
-	int a, b;
+	int i;
 
-	for (a = 0; dest[a] != '\0'; a++)
-	{
-	}
+	for (i = 0; src[i] != '\0'; i++)
+		if (i < n)
+			dest[i] = src[i];
+	while (i < n)
+		dest[i++] = '\0';
 
-	for (b = 0; b < n; b++)
-	{
-		dest[a + b] = src[b];
-		if (src[b] == '\0')
-			b = n;
-	}
 	return (dest);
 }
