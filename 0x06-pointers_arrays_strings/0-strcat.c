@@ -2,7 +2,8 @@
 #include "main.h"
 
 /**
- * main - check the code
+ * char *_strcat - contcatinates strings pointed
+ * by inputs
  *
  * Return: Always 0.
  */
@@ -23,9 +24,9 @@ char *_strcat(char *dest, char *src)
 		element2 = src[i++];
 	}
   
-	for (; i <= element2 - 1; i++)
+	for (; i <= element2; i++)
 	{
-		dest[(element1 - 1) + i] = src[i];
+		dest[(element1) + i] = src[i];
 	}
 	return (dest);
 }
