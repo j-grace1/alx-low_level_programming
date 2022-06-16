@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * _strncat - a function that concatenates two strings
- * @dest:copy to
- * @src: copy from
+ * _strncat - concatenates two strings
+ * @dest:receipient of additional sting
+ * @src: string to be added
  * @n: n
  * Return: Always 0 (Success)
  */
