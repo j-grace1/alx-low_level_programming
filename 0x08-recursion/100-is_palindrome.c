@@ -6,15 +6,15 @@ int palindrome(char str[], int st, int end);
  * @s: input
  * Return: 0
  */
-int is_palindrome(char *s)
+int is_palindrome(char *str)
 {
 	int len;
 
-	len = lengthc(s);
+	len = lengthc(str);
 
 	if (len == 0)
 		return (1);
-	return (palindrome(s, 0, len - 1));
+	return (palindrome(str, 0, len - 1));
 }
 
 /**
