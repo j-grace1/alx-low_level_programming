@@ -3,7 +3,7 @@ int lengthc(char *s);
 int palindrome(char str[], int st, int end);
 /**
  * is_palindrome - Entry Point
- * @s: input
+ * @str: input
  * Return: 0
  */
 int is_palindrome(char *str)
