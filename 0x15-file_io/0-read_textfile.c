@@ -10,37 +10,37 @@
  *
  * Return: actual number of letters read, 0 if end of file
  */
-
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-    int fd;
-    char *buffer;
-    int written, len;
+	int file;
+	int length, written;
+	char *buf;
 
-    if(filename == NULL|| letters == 0){
-        return(0);
-    }
-    buffer = malloc(sizeof(char)*letters);
-    if(buffer == NULL){
-        return(0);
-    }
-    fd = open(filename, O_RDONLY);
-    if(fd == -1){
-        free(buffer);
-        return(0);
-    }
-    len = read(fd, buffer, letters);
-    if (len == -1)
-    {
-        free(buffer)
-        close(fd);
-        return(0);
-    }
-    written = write(STDOUT_FILENO, buffer, len);
-    if (written != len)
-    {
-        return(0);
-    }
-    return(len);
-    close(fd); 
+	if (filename == NULL || letters == 0)
+		return (0);
+	buf = malloc(sizeof(char) * (letters));
+	if (buf == NULL)
+		return (0);
+
+	file = open(filename, O_RDONLY);
+	if (file == -1)
+	{
+		free(buf);
+		return (0);
+	}
+	length = read(file, buf, letters);
+	if (length == -1)
+	{
+		free(buf);
+		close(file);
+		return (0);
+	}
+
+	written = write(STDOUT_FILENO, buf, length);
+
+	free(buf);
+	close(file);
+	if (written != length)
+		return (0);
+	return (length);
 }
