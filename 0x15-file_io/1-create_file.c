@@ -5,7 +5,8 @@
 #include <sys/stat.h>
 
 /**
- * read_textfile - prints text from a file
+ * create_textfile - creates a file and adds text in it
+ * with permissions 600
  *
  * @filename: name of the file
  * @text_content: characters to be written
