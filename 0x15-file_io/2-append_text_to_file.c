@@ -4,15 +4,14 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 /**
- * create_file - creates a file and adds text in it
- * with permissions 600
+ * append_text_to_file - appends to a file
  *
- * @filename: name of the file
- * @text_content: characters to be written
+ * @filename: file on to be appended with data
+ * @text_content: content to append
  *
- * Return: actual number of letters read, 0 if end of file
+ * Return: 1 if success and -1 if failure
  */
-int create_file(const char *filename, char *text_content)
+int append_text_to_file(const char *filename, char *text_content)
 {
 	int fd;
 	int length = 0, wordcount = 0;
@@ -20,8 +19,6 @@ int create_file(const char *filename, char *text_content)
 
 	if (filename == NULL)
 		return (-1);
-    else
-        return(1)
 	fd = open(filename, O_WRONLY| O_APPEND);
 	if (fd == -1)
 		return (-1);
