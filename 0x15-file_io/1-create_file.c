@@ -2,6 +2,14 @@
 #include <fcntl.h>
 #include <stdlib.h>
 
+/**
+ * read_textfile - prints text from a file
+ *
+ * @filename: name of the file
+ * @text_content: characters to be written
+ *
+ * Return: actual number of letters read, 0 if end of file
+ */
 int create_file(const char *filename, char *text_content)
 {
     int fd;
