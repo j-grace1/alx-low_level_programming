@@ -30,13 +30,13 @@ ssize_t read_textfile(const char *filename, size_t letters)
         return(0);
     }
     len = read(fd, buffer, letters);
-    if (read(fd, buffer, letters) == -1)
+    if (len == -1)
     {
         return(0);
         close(fd);
     }
-    written = write(STDOUT_FILENO, buffer, letters);
-    if (written != letters)
+    written = write(STDOUT_FILENO, buffer, len);
+    if (written != len)
     {
         return(0);
     }
