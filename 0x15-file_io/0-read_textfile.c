@@ -14,11 +14,11 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
     int fd;
-    char buffer[100];
+    char *buffer;
     int written;
 
     buffer = malloc(sizeof(char)*letters);
-    if(filename == NULL| letters = 0){
+    if(filename == NULL| letters == 0){
         return(0);
     }
     if(buffer == NULL){
@@ -26,7 +26,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
     }
     fd = open(filename, O_RDONLY);
     if(fd == -1){
-        free(buf);
+        free(buffer);
         return(0);
     }
     lseek(fd, 0, SEEK_SET);
