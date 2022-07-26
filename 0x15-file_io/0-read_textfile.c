@@ -29,7 +29,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
         free(buf)
         return(0);
     }
-    lseek(fd, 0, SEEK_SET);
+    
     read(fd, buffer, letters);
     if (read(fd, buffer, letters) == -1)
     {
