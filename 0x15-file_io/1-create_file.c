@@ -3,7 +3,6 @@
 #include <fcntl.h>
 #include <sys/types.h>
 #include <sys/stat.h>
-
 /**
  * create_textfile - creates a file and adds text in it
  * with permissions 600
