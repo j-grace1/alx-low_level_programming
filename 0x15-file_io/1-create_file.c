@@ -28,6 +28,7 @@ int create_file(const char *filename, char *text_content)
     {
         return(-1);
     }
+
     if (text_content != NULL)
     {
         for (writecount = 0, ptr = text_content; *ptr; *ptr++)
@@ -36,7 +37,7 @@ int create_file(const char *filename, char *text_content)
         }
         written = write(fd, text_content, writecount);
     }
-    close(fd);
+
     if (written != writecount || close(fd) == -1)
     {
         return(-1);
