@@ -28,11 +28,11 @@ int create_file(const char *filename, char *text_content)
     }
     if (text_content != NULL)
     {
-        for (writecount = 0; *text_content; *text_content++)
+        for (writecount = 0, ptr = text_content; *ptr; *ptr++)
         {
             writecount++;
-            written = write(fd, text_content, writecount);
         }
+        written = write(fd, text_content, writecount);
     }
     close(fd);
     if (written != writecount || close(fd) == -1)
