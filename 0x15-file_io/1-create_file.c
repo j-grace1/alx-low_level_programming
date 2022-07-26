@@ -14,33 +14,25 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-    int fd;
-    int written = 0, writecount = 0;
-    char *ptr;
+	int fd;
+	int length = 0, wordcount = 0;
+	char *ptr;
 
-    if (filename == NULL)
-    {
-        return(-1);
-    }
-    
-    fd = open(filename, O_WRONLY|O_CREAT|O_TRUNC, 0600);
-    if (fd == -1)
-    {
-        return(-1);
-    }
+	if (filename == NULL)
+		return (-1);
 
-    if (text_content != NULL)
-    {
-        for (writecount = 0, ptr = text_content; *ptr; ptr++)
-        {
-            writecount++;
-        }
-        written = write(fd, text_content, writecount);
-    }
+	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
+	if (fd == -1)
+		return (-1);
 
-    if (written != writecount || close(fd) == -1)
-    {
-        return(-1);
-    }
-    return(1);
+	if (text_content != NULL)
+	{
+		for (wordcount = 0, ptr = text_content; *ptr; ptr++)
+			wordcount++;
+		length = write(fd, text_content, wordcount);
+	}
+
+	if (close(fd) == -1 || wordcount != length)
+		return (-1);
+	return (1);
 }
