@@ -1,5 +1,5 @@
-#include <fcntl.h>
 #include <unistd.h>
+#include <fcntl.h>
 #include <stdlib.h>
 
 /**
@@ -16,7 +16,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
     int fd;
     char buffer[100];
     int written;
-    
+
     buffer = malloc(sizeof(char)*letters);
     if(filename == NULL| letters = 0){
         return(0);
