@@ -3,7 +3,7 @@
 
 /**
  * print_elem - prints an integer
- * @array_iterator: iterates through an array
+ * array_iterator: iterates through an array
  * and passes elements to a function pointer
  * @array: array of integers of parameters
  * @size: size of the array
