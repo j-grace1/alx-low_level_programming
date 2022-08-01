@@ -19,6 +19,6 @@ _putchar(*name);
  * Return: Nothing.
  */
 void print_name(char *name, void (*f)(char *)){
-f = &print_name_as_is(char *name);
-*f();
+f = &print_name_as_is;
+*f(name);
 }
