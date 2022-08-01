@@ -9,7 +9,7 @@
  */
 void print_name_as_is(char *name)
 {
-_putchar("%s\n", name);
+_putchar(name);
 }
 
 /**
