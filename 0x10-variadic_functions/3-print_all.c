@@ -1,96 +1,50 @@
-#include <stdarg.h>
+#include "variadic_functions.h"
 #include <stdio.h>
+#include <stdarg.h>
 
 /**
- * print_char - Prints a character
+ * print_all - prints anything
+ * @format: list of types of arguments passed to the function
  *
- * @valist: A va_list of arguments
- */
-void print_char(va_list valist)
-{
-    printf("%c", va_arg(valist, int));
-}
-
-/**
- * print_int - Prints an integer
- *
- * @valist: A va_list of arguments
- */
-void print_int(va_list valist)
-{
-    printf("%d", va_arg(valist, int));
-}
-
-/**
- * print_float - Prints a float
- *
- * @valist: A va_list of arguments
- */
-void print_float(va_list valist)
-{
-    printf("%f", va_arg(valist, double));
-}
-
-/**
- * print_string - Prints a string
- *
- * @valist: A va_list of arguments
- */
-void print_string(va_list valist)
-{
-    char *s = va_arg(valist, char *);
-
-    if (s == NULL)
-    {
-        printf("(nil)");
-        return;
-    }
-
-    printf("%s", s);
-}
-
-/**
- * print_all - Prints anything
- *
- * @format: A list of types of arguments passed to the function
+ * Return: void
  */
 void print_all(const char * const format, ...)
 {
-    va_list valist;
-    int i = 0, j = 0;
-    char *sep = "";
+	va_list ap;
+	unsigned int i = 0, j;
+	char *str;
 
-    print_fn print_arr[] = {
-        {'c', print_char},
-        {'i', print_int},
-        {'f', print_float},
-        {'s', print_string},
-        {0, NULL}
-    };
+	va_start(ap, format);
 
-    va_start(valist, format);
+	while (format && format[i])
+	{
+		j = 1;
+		switch (format[i])
+		{
+			case 'c':
+				printf("%c", va_arg(ap, int));
+				break;
+			case 'i':
+				printf("%d", va_arg(ap, int));
+				break;
+			case 'f':
+				printf("%f", va_arg(ap, double));
+				break;
+			case 's':
+				str = va_arg(ap, char *);
+				if (!str)
+					str = "(nil)";
+				printf("%s", str);
+				break;
+			default:
+				j = 0;
+				break;
+		}
+		if (format[i + 1] && j)
+			printf(", ");
+		i++;
+	}
+	printf("\n");
 
-    while (format && format[i])
-    {
-        j = 0;
-
-        while (print_arr[j].type != 0)
-        {
-            if (format[i] == print_arr[j].type)
-            {
-                printf("%s", sep);
-                print_arr[j].func(valist);
-                sep = ", ";
-                break;
-            }
-
-            j++;
-        }
-
-        i++;
-    }
-
-    va_end(valist);
-
-    printf("\n");
+	va_end(ap);
 }
